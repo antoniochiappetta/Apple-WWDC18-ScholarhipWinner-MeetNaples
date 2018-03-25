@@ -256,16 +256,6 @@
                             <constraint firstItem="oya-78-zYN" firstAttribute="trailing" secondItem="CKQ-XO-ntg" secondAttribute="trailing" multiplier="0.3" id="taP-zz-als"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="backgroundView" destination="L2e-Oc-176" id="UQ6-AX-7PY"/>
-                        <outlet property="cityDetailsFirstLinkButton" destination="NGC-47-QQ4" id="6fF-Um-qs9"/>
-                        <outlet property="cityDetailsSecondLinkButton" destination="oya-78-zYN" id="dD0-J8-Vhc"/>
-                        <outlet property="pizzaView" destination="CKQ-XO-ntg" id="6N0-Av-sB2"/>
-                        <outlet property="seaDetailsFirstLinkButton" destination="QC6-D1-Nac" id="gKp-dn-gex"/>
-                        <outlet property="seaDetailsSecondLinkButton" destination="Zyz-K0-iUw" id="omH-KQ-oNa"/>
-                        <outlet property="seaDetailsThirdLinkButton" destination="VZk-ZK-AJn" id="a4N-Lk-gre"/>
-                        <outlet property="vesuviusDetailsLinkButton" destination="z3q-tw-0bG" id="h2V-X5-yG8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRL-gj-P7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -557,6 +547,6 @@
         <image name="tableCloth.png" width="1493" height="1500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7U5-Ip-Mf2"/>
+        <segue reference="0qp-OS-LKk"/>
     </inferredMetricsTieBreakers>
 </document>

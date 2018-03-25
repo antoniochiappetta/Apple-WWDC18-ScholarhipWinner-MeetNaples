@@ -15,21 +15,24 @@ public class NaplesViewController: UIViewController {
     
     // MARK: Public API
     
-    @IBOutlet weak var backgroundView: UIImageView!
-    @IBOutlet weak var pizzaView: PizzaAnimationView!
+    lazy var pizzaView: PizzaAnimationView? = {
+        for subview in self.view.subviews {
+            if let pizzaView = subview as? PizzaAnimationView {
+                return pizzaView
+            }
+        }
+        return nil
+    }()
     
-    @IBOutlet weak var vesuviusDetailsLinkButton: UIButton!
-    @IBOutlet weak var cityDetailsFirstLinkButton: UIButton!
-    @IBOutlet weak var cityDetailsSecondLinkButton: UIButton!
-    @IBOutlet weak var seaDetailsFirstLinkButton: UIButton!
-    @IBOutlet weak var seaDetailsSecondLinkButton: UIButton!
-    @IBOutlet weak var seaDetailsThirdLinkButton: UIButton!
-    
+    lazy var statusViewController: StatusViewController = {
+        return self.childViewControllers.first! as! StatusViewController
+    }()
+
     let context = CIContext()
-    
+
     var audioPlayer = AVAudioPlayer()
     var timer = Timer()
-    
+
     var pizzaNotAnimated = true
     
     func putPizzaOnTheWindowsill() {
@@ -45,14 +48,14 @@ public class NaplesViewController: UIViewController {
             self.pizzaView.isUserInteractionEnabled = true
         }
     }
-    
+
     func timerAction() {
         timer.invalidate()
         audioPlayer.prepareToPlay()
         audioPlayer.play()
         timer = Timer.scheduledTimer(timeInterval: 164, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
     }
-    
+
     func didTouchPizzaView() {
         if pizzaNotAnimated {
             pizzaView.isUserInteractionEnabled = false
@@ -73,7 +76,7 @@ public class NaplesViewController: UIViewController {
             self.pizzaNotAnimated = true
         }
     }
-    
+
     public struct Constants {
         static let StoryboardIdentifier = "Naples"
         static let VesuviusDetailsSegueIdentifier = "VesuviusDetails"
@@ -84,32 +87,26 @@ public class NaplesViewController: UIViewController {
         static let SeaDetailsThirdSegueIdentifier = "SeaDetailsThird"
     }
     
-    @IBAction func getVesuviusDetails() {
-        let detailsVC = DetailsViewController.initWithStoryboard()
-        detailsVC.itemToSee = .Vesuvius
-        present(detailsVC, animated: true, completion: nil)
-    }
-    
     // MARK: ViewController Lifecycle
     
     override public func viewDidLoad() {
-        
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(didTouchPizzaView))
-//        pizzaView.addGestureRecognizer(tap)
-//
-//        let audioPath = Bundle.main.path(forResource: "TarantellaNapoletana", ofType: "mp3")
-//        do {
-//            audioPlayer = try AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-//        }
-//        catch {
-//            print("Something bad happened. Try catching specific errors to narrow things down")
-//        }
-//        audioPlayer.prepareToPlay()
-//        audioPlayer.volume = 0.5
-//        audioPlayer.play()
-//        timer = Timer.scheduledTimer(timeInterval: 164, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-//
-//        self.pizzaView.alpha = 0.0
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTouchPizzaView))
+        pizzaView.addGestureRecognizer(tap)
+
+        let audioPath = Bundle.main.path(forResource: "TarantellaNapoletana", ofType: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        }
+        catch {
+            print("Something bad happened. Try catching specific errors to narrow things down")
+        }
+        audioPlayer.prepareToPlay()
+        audioPlayer.volume = 0.5
+        audioPlayer.play()
+        timer = Timer.scheduledTimer(timeInterval: 164, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+
+        self.pizzaView.alpha = 0.0
     }
     
     // MARK: Navigation
@@ -173,9 +170,9 @@ extension NaplesViewController: PlaygroundLiveViewMessageHandler {
             }
         }
     }
-    
+
     public func receive(_ message: PlaygroundValue) {
-        
+
         switch message {
         case let .boolean(animate):
             if animate == true {
