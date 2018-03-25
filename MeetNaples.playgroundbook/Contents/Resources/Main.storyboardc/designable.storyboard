@@ -172,51 +172,23 @@
                                     <constraint firstAttribute="width" secondItem="CKQ-XO-ntg" secondAttribute="height" multiplier="3:4" id="3lR-g7-01Z"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-q4-yph">
-                                <rect key="frame" x="486" y="95" width="250" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="EUC-HC-2Io"/>
-                                    <constraint firstAttribute="width" secondItem="6nW-q4-yph" secondAttribute="height" multiplier="5:1" id="e1X-xD-hbO"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="Lbd-Ma-rWk" kind="embed" id="BIZ-Bx-6Q0"/>
-                                </connections>
-                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3q-tw-0bG" userLabel="VesuviusDetails">
                                 <rect key="frame" x="69" y="328" width="630" height="153.5"/>
-                                <connections>
-                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="VesuviusDetails" id="Hce-R3-3sO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGC-47-QQ4" userLabel="CityDetails-1">
                                 <rect key="frame" x="69" y="491.5" width="315" height="102.5"/>
-                                <connections>
-                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="CityDetailsFirst" id="7U5-Ip-Mf2"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oya-78-zYN" userLabel="CityDetails-2">
                                 <rect key="frame" x="69" y="783.5" width="161.5" height="51"/>
-                                <connections>
-                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="CityDetailsSecond" id="1S7-zH-6Ot"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QC6-D1-Nac" userLabel="SeaDetails-1">
                                 <rect key="frame" x="391.5" y="491.5" width="307.5" height="102.5"/>
-                                <connections>
-                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="SeaDetailsFirst" id="LFf-Br-qMe"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-K0-iUw" userLabel="SeaDetails-2">
                                 <rect key="frame" x="69" y="604" width="630" height="174"/>
-                                <connections>
-                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="SeaDetailsSecond" id="o1i-mo-iRM"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZk-ZK-AJn" userLabel="SeaDetails-3">
                                 <rect key="frame" x="238" y="783.5" width="461" height="51"/>
-                                <connections>
-                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="SeaDetailsThird" id="0qp-OS-LKk"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,11 +220,9 @@
                             <constraint firstItem="QC6-D1-Nac" firstAttribute="width" secondItem="CKQ-XO-ntg" secondAttribute="width" multiplier="0.4" id="gfe-MY-Gg2"/>
                             <constraint firstItem="NGC-47-QQ4" firstAttribute="bottom" secondItem="CKQ-XO-ntg" secondAttribute="bottom" multiplier="0.58" id="hgp-Y8-szS"/>
                             <constraint firstItem="oya-78-zYN" firstAttribute="height" secondItem="CKQ-XO-ntg" secondAttribute="height" multiplier="0.05" id="hoy-TL-Ym6"/>
-                            <constraint firstAttribute="trailing" secondItem="6nW-q4-yph" secondAttribute="trailing" constant="32" id="iFx-jj-wre"/>
                             <constraint firstItem="Zyz-K0-iUw" firstAttribute="width" secondItem="CKQ-XO-ntg" secondAttribute="width" multiplier="0.82" id="put-wy-x9e"/>
                             <constraint firstItem="QC6-D1-Nac" firstAttribute="bottom" secondItem="CKQ-XO-ntg" secondAttribute="bottom" multiplier="0.58" id="s6A-4m-1Ze"/>
                             <constraint firstItem="Zyz-K0-iUw" firstAttribute="height" secondItem="CKQ-XO-ntg" secondAttribute="height" multiplier="0.17" id="sW0-6r-vCf"/>
-                            <constraint firstItem="6nW-q4-yph" firstAttribute="top" secondItem="o2c-lY-t0f" secondAttribute="bottom" constant="75" id="stO-R2-wNN"/>
                             <constraint firstItem="oya-78-zYN" firstAttribute="trailing" secondItem="CKQ-XO-ntg" secondAttribute="trailing" multiplier="0.3" id="taP-zz-als"/>
                         </constraints>
                     </view>
@@ -502,42 +472,6 @@
             </objects>
             <point key="canvasLocation" x="1676" y="-663"/>
         </scene>
-        <!--Status View Controller-->
-        <scene sceneID="8ca-Nb-LKS">
-            <objects>
-                <viewController id="Lbd-Ma-rWk" customClass="StatusViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qkm-wu-4ID"/>
-                        <viewControllerLayoutGuide type="bottom" id="eqG-2l-RxF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pE5-l3-DAA">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g08-tz-GRt">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.1152724102139473" green="0.056704260408878326" blue="0.33727717399597168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1152724102139473" green="0.056704260408878326" blue="0.33727717399597168" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="g08-tz-GRt" firstAttribute="width" secondItem="pE5-l3-DAA" secondAttribute="width" id="8qr-kN-LUh"/>
-                            <constraint firstItem="g08-tz-GRt" firstAttribute="height" secondItem="pE5-l3-DAA" secondAttribute="height" id="PCa-wF-SeU"/>
-                            <constraint firstItem="g08-tz-GRt" firstAttribute="centerY" secondItem="pE5-l3-DAA" secondAttribute="centerY" id="Y9g-3q-tST"/>
-                            <constraint firstItem="g08-tz-GRt" firstAttribute="centerX" secondItem="pE5-l3-DAA" secondAttribute="centerX" id="imZ-Zi-qMR"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="statusLabel" destination="g08-tz-GRt" id="Hcd-Ws-jHI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3j7-cz-yOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2625" y="-689"/>
-        </scene>
     </scenes>
     <resources>
         <image name="BackgroundGreen.png" width="1024" height="1366"/>
@@ -546,7 +480,4 @@
         <image name="Napoli Background.png" width="1024" height="1536"/>
         <image name="tableCloth.png" width="1493" height="1500"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="0qp-OS-LKk"/>
-    </inferredMetricsTieBreakers>
 </document>

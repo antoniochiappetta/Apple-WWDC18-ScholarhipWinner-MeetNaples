@@ -15,13 +15,20 @@ public class NaplesViewController: UIViewController {
     
     // MARK: Public API
     
-    lazy var pizzaView: PizzaAnimationView? = {
+    lazy var optPizzaView: PizzaAnimationView? = {
         for subview in self.view.subviews {
             if let pizzaView = subview as? PizzaAnimationView {
                 return pizzaView
             }
         }
         return nil
+    }()
+
+    lazy var pizzaView: PizzaAnimationView = {
+        if let pizzaView = self.optPizzaView {
+            return pizzaView
+        }
+        return PizzaAnimationView()
     }()
     
     lazy var statusViewController: StatusViewController = {
@@ -34,7 +41,7 @@ public class NaplesViewController: UIViewController {
     var timer = Timer()
 
     var pizzaNotAnimated = true
-    
+
     func putPizzaOnTheWindowsill() {
         let pizza = self.pizzaView.viewsByName["Pizza"]!
         var perspectiveTransform = CATransform3DIdentity
@@ -65,7 +72,7 @@ public class NaplesViewController: UIViewController {
             self.restart()
         }
     }
-    
+
     func restart() {
         UIView.animate(withDuration: 2.0, animations: {
             self.pizzaView.alpha = 0.0
@@ -140,7 +147,7 @@ extension NaplesViewController {
 }
 
 extension NaplesViewController: PlaygroundLiveViewMessageHandler {
-    
+
     func animatePizzaFromKeyValueStore() {
         UIView.animate(withDuration: 2.0, animations: {
             self.pizzaView.alpha = 1.0
@@ -184,3 +191,4 @@ extension NaplesViewController: PlaygroundLiveViewMessageHandler {
         }
     }
 }
+
