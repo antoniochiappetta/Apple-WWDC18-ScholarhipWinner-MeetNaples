@@ -21,10 +21,6 @@ public class NaplesViewController: UIViewController {
         }
         return PizzaAnimationView()
     }()
-    
-    lazy var statusViewController: StatusViewController = {
-        return self.childViewControllers.first! as! StatusViewController
-    }()
 
     let context = CIContext()
 
@@ -32,6 +28,7 @@ public class NaplesViewController: UIViewController {
     var timer = Timer()
 
     var pizzaNotAnimated = true
+    var animationRunning = false
 
     func putPizzaOnTheWindowsill() {
         let pizza = self.pizzaView.viewsByName["Pizza"]!
@@ -44,6 +41,7 @@ public class NaplesViewController: UIViewController {
             pizza.layer.transform = scalePerspectiveTransform
         }) { (completed) in
             self.pizzaView.isUserInteractionEnabled = true
+            self.animationRunning = false
         }
     }
 
@@ -55,12 +53,15 @@ public class NaplesViewController: UIViewController {
     }
 
     func didTouchPizzaView() {
-        if pizzaNotAnimated {
-            pizzaView.isUserInteractionEnabled = false
-            pizzaNotAnimated = false
-            animatePizzaFromKeyValueStore()
-        } else {
-            self.restart()
+        if !animationRunning {
+            animationRunning = true
+            if pizzaNotAnimated {
+                pizzaView.isUserInteractionEnabled = false
+                pizzaNotAnimated = false
+                animatePizzaFromKeyValueStore()
+            } else {
+                self.restart()
+            }
         }
     }
 
@@ -72,17 +73,13 @@ public class NaplesViewController: UIViewController {
             let pizza = self.pizzaView.viewsByName["Pizza"]!
             pizza.layer.transform = CATransform3DIdentity
             self.pizzaNotAnimated = true
+            self.animationRunning = false
+            self.didTouchPizzaView()
         }
     }
 
     public struct Constants {
         static let StoryboardIdentifier = "Naples"
-        static let VesuviusDetailsSegueIdentifier = "VesuviusDetails"
-        static let CityDetailsFirstSegueIdentifier = "CityDetailsFirst"
-        static let CityDetailsSecondSegueIdentifier = "CityDetailsSecond"
-        static let SeaDetailsFirstSegueIdentifier = "SeaDetailsFirst"
-        static let SeaDetailsSecondSegueIdentifier = "SeaDetailsSecond"
-        static let SeaDetailsThirdSegueIdentifier = "SeaDetailsThird"
     }
     
     // MARK: ViewController Lifecycle
@@ -105,26 +102,6 @@ public class NaplesViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 164, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
 
         self.pizzaView.alpha = 0.0
-    }
-    
-    // MARK: Navigation
-    
-    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let identifier = (segue.identifier)!
-        let dest = segue.destination as! DetailsViewController
-        switch identifier {
-        case Constants.VesuviusDetailsSegueIdentifier:
-            dest.itemToSee = .Vesuvius
-        case Constants.CityDetailsFirstSegueIdentifier,
-             Constants.CityDetailsSecondSegueIdentifier:
-            dest.itemToSee = .City
-        case Constants.SeaDetailsFirstSegueIdentifier,
-             Constants.SeaDetailsSecondSegueIdentifier,
-             Constants.SeaDetailsThirdSegueIdentifier:
-            dest.itemToSee = .Sea
-        default:
-            break
-        }
     }
     
     // MARK: Private implementation
@@ -185,7 +162,6 @@ extension NaplesViewController: PlaygroundLiveViewMessageHandler {
         switch message {
         case let .boolean(animate):
             if animate == true {
-                self.pizzaNotAnimated = true
                 self.didTouchPizzaView()
             }
         default:

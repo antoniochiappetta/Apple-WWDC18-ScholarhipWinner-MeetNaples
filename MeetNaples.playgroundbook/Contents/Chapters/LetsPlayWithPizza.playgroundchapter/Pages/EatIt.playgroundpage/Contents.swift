@@ -17,7 +17,6 @@
  
  Interact with the elements in the picture to learn something about them.
  1. Click on the buildings 🏙 to know more about the history of the city.
- 2. Click on the sky 🌅 to see some beautiful pictures of sunrises and sunsets in Naples.
  2. Click on the [Vesuvius](glossary://Vesuvius) to know about the most famous volcano in Italy.
  3. Click on the sea to know about Naples' wonderful gulf, including the islands [Ischia](glossary://Ischia), [Capri](glossary://Capri) and [Procida](glossary://Procida) as well as the [Sorrentine Peninsula](glossary://Sorrentine%20Peninsula).
  - - -
