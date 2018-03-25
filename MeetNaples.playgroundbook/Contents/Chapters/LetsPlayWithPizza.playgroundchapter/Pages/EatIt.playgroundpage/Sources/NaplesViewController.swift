@@ -18,9 +18,12 @@ public class NaplesViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var pizzaView: PizzaAnimationView!
     
-    lazy var statusViewController: StatusViewController = {
-        return childViewControllers.lazy.flatMap({$0 as? StatusViewController}).first!
-    }()
+    @IBOutlet weak var vesuviusDetailsLinkButton: UIButton!
+    @IBOutlet weak var cityDetailsFirstLinkButton: UIButton!
+    @IBOutlet weak var cityDetailsSecondLinkButton: UIButton!
+    @IBOutlet weak var seaDetailsFirstLinkButton: UIButton!
+    @IBOutlet weak var seaDetailsSecondLinkButton: UIButton!
+    @IBOutlet weak var seaDetailsThirdLinkButton: UIButton!
     
     let context = CIContext()
     
@@ -73,28 +76,60 @@ public class NaplesViewController: UIViewController {
     
     public struct Constants {
         static let StoryboardIdentifier = "Naples"
+        static let VesuviusDetailsSegueIdentifier = "VesuviusDetails"
+        static let CityDetailsFirstSegueIdentifier = "CityDetailsFirst"
+        static let CityDetailsSecondSegueIdentifier = "CityDetailsSecond"
+        static let SeaDetailsFirstSegueIdentifier = "SeaDetailsFirst"
+        static let SeaDetailsSecondSegueIdentifier = "SeaDetailsSecond"
+        static let SeaDetailsThirdSegueIdentifier = "SeaDetailsThird"
+    }
+    
+    @IBAction func getVesuviusDetails() {
+        let detailsVC = DetailsViewController.initWithStoryboard()
+        detailsVC.itemToSee = .Vesuvius
+        present(detailsVC, animated: true, completion: nil)
     }
     
     // MARK: ViewController Lifecycle
     
     override public func viewDidLoad() {
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTouchPizzaView))
-        pizzaView.addGestureRecognizer(tap)
-        
-        let audioPath = Bundle.main.path(forResource: "TarantellaNapoletana", ofType: "mp3")
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(didTouchPizzaView))
+//        pizzaView.addGestureRecognizer(tap)
+//
+//        let audioPath = Bundle.main.path(forResource: "TarantellaNapoletana", ofType: "mp3")
+//        do {
+//            audioPlayer = try AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+//        }
+//        catch {
+//            print("Something bad happened. Try catching specific errors to narrow things down")
+//        }
+//        audioPlayer.prepareToPlay()
+//        audioPlayer.volume = 0.5
+//        audioPlayer.play()
+//        timer = Timer.scheduledTimer(timeInterval: 164, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+//
+//        self.pizzaView.alpha = 0.0
+    }
+    
+    // MARK: Navigation
+    
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifier = (segue.identifier)!
+        let dest = segue.destination as! DetailsViewController
+        switch identifier {
+        case Constants.VesuviusDetailsSegueIdentifier:
+            dest.itemToSee = .Vesuvius
+        case Constants.CityDetailsFirstSegueIdentifier,
+             Constants.CityDetailsSecondSegueIdentifier:
+            dest.itemToSee = .City
+        case Constants.SeaDetailsFirstSegueIdentifier,
+             Constants.SeaDetailsSecondSegueIdentifier,
+             Constants.SeaDetailsThirdSegueIdentifier:
+            dest.itemToSee = .Sea
+        default:
+            break
         }
-        catch {
-            print("Something bad happened. Try catching specific errors to narrow things down")
-        }
-        audioPlayer.prepareToPlay()
-        audioPlayer.volume = 0.5
-        audioPlayer.play()
-        timer = Timer.scheduledTimer(timeInterval: 164, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        
-        self.pizzaView.alpha = 0.0
     }
     
 }
