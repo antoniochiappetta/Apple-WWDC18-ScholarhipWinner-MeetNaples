@@ -14,15 +14,6 @@ import AVFoundation
 public class NaplesViewController: UIViewController {
     
     // MARK: Public API
-    
-    lazy var optPizzaView: PizzaAnimationView? = {
-        for subview in self.view.subviews {
-            if let pizzaView = subview as? PizzaAnimationView {
-                return pizzaView
-            }
-        }
-        return nil
-    }()
 
     lazy var pizzaView: PizzaAnimationView = {
         if let pizzaView = self.optPizzaView {
@@ -135,6 +126,17 @@ public class NaplesViewController: UIViewController {
             break
         }
     }
+    
+    // MARK: Private implementation
+    
+    private lazy var optPizzaView: PizzaAnimationView? = {
+        for subview in self.view.subviews {
+            if let pizzaView = subview as? PizzaAnimationView {
+                return pizzaView
+            }
+        }
+        return nil
+    }()
     
 }
 

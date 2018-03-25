@@ -174,21 +174,39 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3q-tw-0bG" userLabel="VesuviusDetails">
                                 <rect key="frame" x="69" y="328" width="630" height="153.5"/>
+                                <connections>
+                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="VesuviusDetails" id="qm6-JL-dAI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGC-47-QQ4" userLabel="CityDetails-1">
                                 <rect key="frame" x="69" y="491.5" width="315" height="102.5"/>
+                                <connections>
+                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="CityDetailsFirst" id="zQz-Q2-1i6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oya-78-zYN" userLabel="CityDetails-2">
                                 <rect key="frame" x="69" y="783.5" width="161.5" height="51"/>
+                                <connections>
+                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="CityDetailsSecond" id="LbJ-DC-7u7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QC6-D1-Nac" userLabel="SeaDetails-1">
                                 <rect key="frame" x="391.5" y="491.5" width="307.5" height="102.5"/>
+                                <connections>
+                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="SeaDetailsFirst" id="Ujs-yH-aWB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-K0-iUw" userLabel="SeaDetails-2">
                                 <rect key="frame" x="69" y="604" width="630" height="174"/>
+                                <connections>
+                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="SeaDetailsSecond" id="gzf-iK-QmE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZk-ZK-AJn" userLabel="SeaDetails-3">
                                 <rect key="frame" x="238" y="783.5" width="461" height="51"/>
+                                <connections>
+                                    <segue destination="QXa-q1-PdS" kind="modal" identifier="SeaDetailsThird" id="T9B-DI-ysj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -480,4 +498,7 @@
         <image name="Napoli Background.png" width="1024" height="1536"/>
         <image name="tableCloth.png" width="1493" height="1500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gzf-iK-QmE"/>
+    </inferredMetricsTieBreakers>
 </document>
