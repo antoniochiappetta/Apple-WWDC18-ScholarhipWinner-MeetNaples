@@ -45,15 +45,15 @@ class LiveViewListener: PlaygroundRemoteLiveViewProxyDelegate {
                     switch currentNumber {
                     case let .integer(number):
                         numberOfPizzasAnimated = number + 1
-                        page.keyValueStore["NumberOfPizzasAnimated"] = .integer(numberOfPizzasAnimated)
                     default:
                         break
                     }
-                    if numberOfPizzasAnimated > 0 {
-                        page.assessmentStatus = .pass(message: "### Perfect! \nYou learnt about different pizzas, go ahead and create yours! \n\n[**Next page**](@next)")
-                    }
                 } else {
-                    page.keyValueStore["NumberOfPizzasAnimated"] = .integer(1)
+                    numberOfPizzasAnimated = 1
+                }
+                page.keyValueStore["NumberOfPizzasAnimated"] = .integer(numberOfPizzasAnimated)
+                if numberOfPizzasAnimated > 0 {
+                    page.assessmentStatus = .pass(message: "### Perfect! \nYou learnt about different pizzas, go ahead and create yours! \n\n[**Next page**](@next)")
                 }
             }
         default:

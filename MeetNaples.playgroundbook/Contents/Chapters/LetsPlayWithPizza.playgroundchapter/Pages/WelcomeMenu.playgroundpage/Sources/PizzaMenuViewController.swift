@@ -146,7 +146,7 @@ extension PizzaMenuViewController: PlaygroundLiveViewMessageHandler {
     }
     
     @objc public func remindUser() {
-        self.statusViewController.show(message: "Tap on Run My Code to start learning")
+        self.statusViewController.show(message: "Run My Code to start learning")
     }
     
     public func receive(_ message: PlaygroundValue) {
