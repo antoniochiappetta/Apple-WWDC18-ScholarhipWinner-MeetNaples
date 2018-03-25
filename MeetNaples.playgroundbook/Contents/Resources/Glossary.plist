@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Vesuvius</key>
+		<dict>
+			<key>Definition</key>
+			<string>Somma-stratovolcano located on the Gulf of Naples in Campania, Italy, about 9 km (5.6 mi) east of Naples and a short distance from the shore. It is one of several volcanoes which form the Campanian volcanic arc. Vesuvius consists of a large cone partially encircled by the steep rim of a summit caldera caused by the collapse of an earlier and originally much higher structure. Mount Vesuvius is best known for its eruption in AD 79 that led to the burying and destruction of the Roman cities of Pompeii and Herculaneum, as well as several other settlements.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Eat%20it</string>
+				<key>Title</key>
+				<string>Eat it</string>
+			</dict>
+		</dict>
+		<key>Sorrentine Peninsula</key>
+		<dict>
+			<key>Definition</key>
+			<string>Peninsula located in southern Italy that separates the Gulf of Naples to the north from the Gulf of Salerno to the south. The peninsula is named after its main town, Sorrento, which is located on the north (Gulf of Naples) coast. The Amalfi Coast is located on the southern side. The Lattari Mountains form the geographical backbone of the peninsula. The island of Capri lies off the western tip of the peninsula in the Tyrrhenian Sea. The whole area is an important tourist destination.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Eat%20it</string>
+				<key>Title</key>
+				<string>Eat it</string>
+			</dict>
+		</dict>
+		<key>Procida</key>
+		<dict>
+			<key>Definition</key>
+			<string>One of the Flegrean Islands off the coast of Naples in southern Italy. The island is between Cape Miseno and the island of Ischia. With its tiny satellite island of Vivara, it is a comune of the Metropolitan City of Naples, in the region of Campania. Its coastlines, very jagged, are 16 km (9.9 mi). The Terra Murata hill is the highest point on the island (91 metres (299 ft)).</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Eat%20it</string>
+				<key>Title</key>
+				<string>Eat it</string>
+			</dict>
+		</dict>
+		<key>Capri</key>
+		<dict>
+			<key>Definition</key>
+			<string>Island located in the Tyrrhenian Sea off the Sorrentine Peninsula, on the south side of the Gulf of Naples in the Campania region of Italy. It has been a resort since the time of the Roman Republic. Some of the main features of the island include the following: the Marina Piccola (the little harbour), the Belvedere of Tragara (a high panoramic promenade lined with villas), the limestone crags called sea stacks that project above the sea (the Faraglioni), the town of Anacapri, the Blue Grotto (Grotta Azzurra), and the ruins of the Imperial Roman villas.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Eat%20it</string>
+				<key>Title</key>
+				<string>Eat it</string>
+			</dict>
+		</dict>
+		<key>Ischia</key>
+		<dict>
+			<key>Definition</key>
+			<string>Volcanic island in the Tyrrhenian Sea. It lies at the northern end of the Gulf of Naples, about 30 kilometres (19 miles) from the city of Naples. It is the largest of the Phlegrean Islands. Roughly trapezoidal, it measures approximately 10 km (6 miles) east to west and 7 km (4 miles) north to south. Ischia&apos;s main industry is tourism, centering on thermal spas that cater mostly to European (especially German) and Asian tourists eager to enjoy the fruits of the island&apos;s natural volcanic activity, its hot springs, and its volcanic mud.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Eat%20it</string>
+				<key>Title</key>
+				<string>Eat it</string>
+			</dict>
+		</dict>
+		<key>Dough</key>
+		<dict>
+			<key>Definition</key>
+			<string>Thick, malleable, sometimes elastic, paste made out of any grains, leguminous or chestnut crops. Dough is typically made by mixing flour with a small amount of water and/or other liquid, and sometimes includes yeast or other leavening agents as well as other ingredients such as various fats or flavorings. The process of making and shaping dough is a precursor to making a wide variety of foodstuffs, particularly breads and bread-based items.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Make%20your%20pizza</string>
+				<key>Title</key>
+				<string>Make your pizza</string>
+			</dict>
+		</dict>
+		<key>Ingredient</key>
+		<dict>
+			<key>Definition</key>
+			<string>An ingredient is a substance that forms part of a mixture (in a general sense). For example, in cooking, recipes specify which ingredients are used to prepare a specific dish.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Welcome%20menu</string>
+				<key>Title</key>
+				<string>Welcome menu</string>
+			</dict>
+		</dict>
+		<key>Menu</key>
+		<dict>
+			<key>Definition</key>
+			<string>In a restaurant, there is a menu of food and beverage offerings. A menu may be à la carte – which guests use to choose from a list of options – or table d&apos;hôte, in which case a pre-established sequence of courses is served.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Welcome%20menu</string>
+				<key>Title</key>
+				<string>Welcome menu</string>
+			</dict>
+		</dict>
+		<key>Pizza</key>
+		<dict>
+			<key>Definition</key>
+			<string>Yeasted flatbread generally topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments.</string>
+			<key>FirstUse</key>
+			<dict>
+				<key>PageReference</key>
+				<string>Let&apos;s%20play%20with%20pizza/Welcome%20menu</string>
+				<key>Title</key>
+				<string>Welcome menu</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

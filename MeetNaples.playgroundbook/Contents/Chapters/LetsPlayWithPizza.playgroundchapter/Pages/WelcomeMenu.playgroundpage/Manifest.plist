@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>Content</key>
+			<string>The pizza to animate will always be the one currently in the middle, no matter what part of the menu wheel you click.</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<string>The wheel cannot be used while an animation is running.</string>
+		</dict>
+	</array>
+	<key>PosterReference</key>
+	<string>WelcomeMenu_Poster.png</string>
+	<key>Version</key>
+	<string>1.0</string>
+	<key>Name</key>
+	<string>Welcome menu</string>
+	<key>LiveViewMode</key>
+	<string>VisibleByDefault</string>
+	<key>LiveViewEdgeToEdge</key>
+	<true/>
+</dict>
+</plist>
