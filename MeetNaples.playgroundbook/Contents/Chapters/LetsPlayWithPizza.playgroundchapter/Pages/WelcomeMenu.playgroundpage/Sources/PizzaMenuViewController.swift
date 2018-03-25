@@ -24,7 +24,7 @@ public class PizzaMenuViewController: UIViewController, UICollectionViewDataSour
     let pizzas: [String] = Constants.PizzasArray
     
     lazy var statusViewController: StatusViewController = {
-        return childViewControllers.lazy.flatMap({$0 as? StatusViewController}).first!
+        return self.childViewControllers.first! as! StatusViewController
     }()
     
     // MARK: ViewController Lifecycle
