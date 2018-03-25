@@ -67,37 +67,13 @@
 		<key>Dough</key>
 		<dict>
 			<key>Definition</key>
-			<string>Thick, malleable, sometimes elastic, paste made out of any grains, leguminous or chestnut crops. Dough is typically made by mixing flour with a small amount of water and/or other liquid, and sometimes includes yeast or other leavening agents as well as other ingredients such as various fats or flavorings. The process of making and shaping dough is a precursor to making a wide variety of foodstuffs, particularly breads and bread-based items.</string>
+			<string>Dough is typically made by mixing flour with a small amount of water and/or other liquid, and sometimes includes yeast or other leavening agents as well as other ingredients such as various fats or flavorings.</string>
 			<key>FirstUse</key>
 			<dict>
 				<key>PageReference</key>
 				<string>Let&apos;s%20play%20with%20pizza/Make%20your%20pizza</string>
 				<key>Title</key>
 				<string>Make your pizza</string>
-			</dict>
-		</dict>
-		<key>Ingredient</key>
-		<dict>
-			<key>Definition</key>
-			<string>An ingredient is a substance that forms part of a mixture (in a general sense). For example, in cooking, recipes specify which ingredients are used to prepare a specific dish.</string>
-			<key>FirstUse</key>
-			<dict>
-				<key>PageReference</key>
-				<string>Let&apos;s%20play%20with%20pizza/Welcome%20menu</string>
-				<key>Title</key>
-				<string>Welcome menu</string>
-			</dict>
-		</dict>
-		<key>Menu</key>
-		<dict>
-			<key>Definition</key>
-			<string>In a restaurant, there is a menu of food and beverage offerings. A menu may be à la carte – which guests use to choose from a list of options – or table d&apos;hôte, in which case a pre-established sequence of courses is served.</string>
-			<key>FirstUse</key>
-			<dict>
-				<key>PageReference</key>
-				<string>Let&apos;s%20play%20with%20pizza/Welcome%20menu</string>
-				<key>Title</key>
-				<string>Welcome menu</string>
 			</dict>
 		</dict>
 		<key>Pizza</key>
