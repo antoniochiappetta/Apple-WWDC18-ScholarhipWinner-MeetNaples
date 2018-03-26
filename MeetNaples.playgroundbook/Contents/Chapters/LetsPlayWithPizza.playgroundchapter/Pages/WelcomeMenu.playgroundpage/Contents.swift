@@ -15,7 +15,7 @@
  
  ![Pizza](MiniPizzaMargherita.png)
  - - -
- 1. First of all, to enable the animations on each pizza and start the counter, tap on *Run my code*.
+ 1. First of all, to enable the animations on each pizza and start learning, tap on *Run my code*.
  2. Then turn the wheel of the menu to choose the pizza you want to know about.
  2. Once chosen one, click on it to **learn** how the various ingredients are placed on it.
  - Important:
@@ -53,7 +53,7 @@ class LiveViewListener: PlaygroundRemoteLiveViewProxyDelegate {
                 }
                 page.keyValueStore["NumberOfPizzasAnimated"] = .integer(numberOfPizzasAnimated)
                 if numberOfPizzasAnimated > 0 {
-                    page.assessmentStatus = .pass(message: "### Perfect! \nYou learnt about different pizzas, go ahead and create yours! \n\n[**Next page**](@next)")
+                    page.assessmentStatus = .pass(message: "### Perfect! \nYou learnt which ingredients are needed for a good pizza, go ahead and create yours! \n\n[**Next page**](@next)")
                 }
             }
         default:
