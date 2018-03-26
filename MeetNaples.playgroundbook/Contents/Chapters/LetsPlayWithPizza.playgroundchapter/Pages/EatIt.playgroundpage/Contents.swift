@@ -13,14 +13,9 @@
  - Note:
  That means that even after coming back to this page in a week you will still find it!
  
- Now look at this beautiful picture. Here's Naples with all its beautiness.
- 
- Interact with the elements in the picture to learn something about them.
- 1. Click on the buildings 🏙 to know more about the history of the city.
- 2. Click on the [Vesuvius](glossary://Vesuvius) to know about the most famous volcano in Italy.
- 3. Click on the sea to know about Naples' wonderful gulf, including the islands [Ischia](glossary://Ischia), [Capri](glossary://Capri) and [Procida](glossary://Procida) as well as the [Sorrentine Peninsula](glossary://Sorrentine%20Peninsula).
+ Now look at this drawing, here's Naples with all its beautiness. You can see the famous volcano [Vesuvius](glossary://Vesuvius) together with the [Gulf of Naples](glossary://Gulf of Naples).
  - - -
- When you're done with this, send the correct message among the ones suggested to see your pizza being put on the windowsill.
+ When you're done with looking at the drawing, send the correct message among the ones suggested to see your pizza being put on the windowsill.
  * Callout(And then what?):
  And then... just imagine to be there and eat your pizza!
  */
