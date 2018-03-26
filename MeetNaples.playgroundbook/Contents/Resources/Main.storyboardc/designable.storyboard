@@ -228,10 +228,10 @@
                             <constraint firstAttribute="trailing" secondItem="6mM-uR-p6o" secondAttribute="trailing" id="4Iz-BM-b7B"/>
                             <constraint firstItem="33E-zT-IQC" firstAttribute="top" secondItem="2oe-HF-iKz" secondAttribute="bottom" constant="75" id="7aZ-k0-e8e"/>
                             <constraint firstItem="6mM-uR-p6o" firstAttribute="leading" secondItem="64J-9O-2Vv" secondAttribute="leading" id="Fnc-bt-yo1"/>
+                            <constraint firstItem="O66-WY-vn7" firstAttribute="width" secondItem="64J-9O-2Vv" secondAttribute="width" id="L5X-pQ-cQQ"/>
                             <constraint firstItem="O66-WY-vn7" firstAttribute="centerX" secondItem="6mM-uR-p6o" secondAttribute="centerX" id="MOJ-XQ-FUc"/>
-                            <constraint firstItem="O66-WY-vn7" firstAttribute="top" secondItem="64J-9O-2Vv" secondAttribute="top" id="VXX-S2-pGE"/>
+                            <constraint firstItem="O66-WY-vn7" firstAttribute="centerY" secondItem="64J-9O-2Vv" secondAttribute="centerY" id="OIC-fe-ewB"/>
                             <constraint firstAttribute="trailing" secondItem="33E-zT-IQC" secondAttribute="trailing" constant="32" id="j2T-89-jOx"/>
-                            <constraint firstItem="LQ2-b7-3Zt" firstAttribute="top" secondItem="O66-WY-vn7" secondAttribute="bottom" id="liF-5u-r6a"/>
                             <constraint firstItem="6mM-uR-p6o" firstAttribute="top" secondItem="64J-9O-2Vv" secondAttribute="top" id="lyQ-yS-x5z"/>
                             <constraint firstItem="LQ2-b7-3Zt" firstAttribute="top" secondItem="6mM-uR-p6o" secondAttribute="bottom" id="sCg-Pg-Vpn"/>
                         </constraints>
