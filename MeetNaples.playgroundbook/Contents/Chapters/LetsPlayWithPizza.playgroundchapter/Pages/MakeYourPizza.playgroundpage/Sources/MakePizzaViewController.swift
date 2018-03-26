@@ -17,13 +17,12 @@ public class MakePizzaViewController: UIViewController {
     @IBOutlet weak var pizzaView: PizzaAnimationView!
     
     lazy var statusViewController: StatusViewController = {
-        return childViewControllers.lazy.flatMap({$0 as? StatusViewController}).first!
+        return self.childViewControllers.first! as! StatusViewController
     }()
     
     override public func viewDidLoad() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(restart))
         view.addGestureRecognizer(tap)
-        self.statusViewController.show(message: "This is not a pizza in the menu, try a Margherita (sauce, mozzarella, basil)")
     }
     
     public struct Constants {
@@ -59,6 +58,8 @@ extension MakePizzaViewController: PlaygroundLiveViewMessageHandler {
             PizzaAnimationManager.createPizza(pizzaView: self.pizzaView, ingredients: ingredientsReceived, withCompletion: {
                 if let message = DefaultPizzas.compare(withPizza: array) {
                     self.send(message)
+                } else {
+                    self.statusViewController.show(message: "Not in the menu, use hints")
                 }
             })
         default:

@@ -24,7 +24,7 @@ public class PizzaMenuViewController: UIViewController, UICollectionViewDataSour
     let pizzas: [String] = Constants.PizzasArray
     
     lazy var statusViewController: StatusViewController = {
-        return childViewControllers.lazy.flatMap({$0 as? StatusViewController}).first!
+        return self.childViewControllers.first! as! StatusViewController
     }()
     
     // MARK: ViewController Lifecycle
@@ -146,7 +146,7 @@ extension PizzaMenuViewController: PlaygroundLiveViewMessageHandler {
     }
     
     @objc public func remindUser() {
-        self.statusViewController.show(message: "Tap on Run My Code to start learning")
+        self.statusViewController.show(message: "Run My Code to start learning")
     }
     
     public func receive(_ message: PlaygroundValue) {

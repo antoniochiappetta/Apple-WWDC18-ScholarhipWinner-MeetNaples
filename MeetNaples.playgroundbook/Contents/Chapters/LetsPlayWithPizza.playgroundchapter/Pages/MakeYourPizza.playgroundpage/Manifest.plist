@@ -12,11 +12,17 @@
 		</dict>
 		<dict>
 			<key>Content</key>
+			<string>If you don&apos;t remember the ordered list of ingredients for a particular pizza, here is one: Pizza Margherita is composed by Sauce, Mozzarella and Basil.</string>
+			<key>SpoilerButtonTitle</key>
+			<string>Show me a good example</string>
+		</dict>
+		<dict>
+			<key>Content</key>
 			<string>The ingredients z-position on the pizza is established according to a particular hierarchy, no matter the order of the methods you send.</string>
 		</dict>
 	</array>
 	<key>PosterReference</key>
-	<string>Empty_Poster.png</string>
+	<string>tableCloth.png</string>
 	<key>Version</key>
 	<string>1.0</string>
 	<key>Name</key>

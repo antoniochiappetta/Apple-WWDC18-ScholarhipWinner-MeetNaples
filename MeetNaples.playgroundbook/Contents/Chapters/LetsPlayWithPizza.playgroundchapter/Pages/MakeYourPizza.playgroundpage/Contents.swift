@@ -26,7 +26,7 @@
  - - -
  1. Let's start. The first ingredient is already there for you.
  2. Add as many ingredients as you want using the same mechanism.
- 3. Tap on *Run my code* to see the animation start and store the pizza in memory. You will see it again soon.
+ 3. Tap on *Run My Code* to see the animation start and store the pizza in memory. You will see it again soon.
  4. Change ingredients and run your code again to overwrite your previous edits.
  - Important:
  Do your best to get the title of **Real Neapolitan Pizzaiolo**. 
