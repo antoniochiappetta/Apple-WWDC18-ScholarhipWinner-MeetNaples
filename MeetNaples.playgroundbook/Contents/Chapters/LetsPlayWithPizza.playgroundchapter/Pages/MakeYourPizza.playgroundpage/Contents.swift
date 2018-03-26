@@ -29,7 +29,7 @@
  3. Tap on *Run My Code* to see the animation start and store the pizza in memory. You will see it again soon.
  4. Change ingredients and run your code again to overwrite your previous edits.
  - Important:
- Do your best to get the title of **Real Neapolitan Pizzaiolo**. 
+ Do your best to get the title of **Real Neapolitan Pizzaiolo** (see hints for more about this magnificent title).
  */
 //#-hidden-code
 import PlaygroundSupport

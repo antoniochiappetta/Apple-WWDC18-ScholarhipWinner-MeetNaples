@@ -6,19 +6,13 @@
 	<array>
 		<dict>
 			<key>Content</key>
-			<string>Pay attention to the number and the correct order of the ingredients because to be a real neapolitan pizzaiolo you will need to make one of the pizza seen on the menu.</string>
-			<key>SpoilerButtonTitle</key>
-			<string>Neapolitan Pizzaiolo?</string>
+			<string>Pay attention to the number and the correct order of the ingredients because to be a Real Neapolitan Pizzaiolo you will need to make one of the pizza seen on the menu.</string>
 		</dict>
 		<dict>
 			<key>Content</key>
 			<string>If you don&apos;t remember the ordered list of ingredients for a particular pizza, here is one: Pizza Margherita is composed by Sauce, Mozzarella and Basil.</string>
 			<key>SpoilerButtonTitle</key>
 			<string>Show me a good example</string>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<string>The ingredients z-position on the pizza is established according to a particular hierarchy, no matter the order of the methods you send.</string>
 		</dict>
 	</array>
 	<key>PosterReference</key>
