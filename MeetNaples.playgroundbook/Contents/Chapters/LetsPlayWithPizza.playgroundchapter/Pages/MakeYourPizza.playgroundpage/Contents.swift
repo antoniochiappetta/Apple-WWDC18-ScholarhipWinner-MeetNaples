@@ -9,7 +9,7 @@
 /*:
  # Time to make your pizza
  
- Last time you learnt about different kind of pizzas. Now it's to prepare one of your own!
+ Last time you learnt about different kind of pizzas. Now it's time to prepare one of your own!
  
  You must be asking yourself...
  * Callout(Monologue):

@@ -13,7 +13,7 @@
  - Note:
  That means that even after coming back to this page in a week you will still find it!
  
- Now look at this drawing, here's Naples with all its beautiness. You can see the famous volcano [Vesuvius](glossary://Vesuvius) together with the [Gulf of Naples](glossary://Gulf of Naples) and the rest of the city.
+ Now look at this drawing, here's Naples with all its beautiness. You can see the famous volcano [Vesuvius](glossary://Vesuvius) together with the [Gulf of Naples](glossary://Gulf) and the rest of the city.
  - - -
  When you're done with looking at the drawing, send the correct message among the ones suggested to see your pizza being put on the windowsill.
  * Callout(And then what?):
