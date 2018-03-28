@@ -89,7 +89,7 @@ public class NaplesViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTouchPizzaView))
         pizzaView.addGestureRecognizer(tap)
 
-        let audioPath = Bundle.main.path(forResource: "TarantellaNapoletana", ofType: "mp3")
+        let audioPath = Bundle.main.path(forResource: "Bushwick_Tarantella", ofType: "mp3")
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
         }
