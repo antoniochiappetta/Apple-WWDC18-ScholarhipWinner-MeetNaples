@@ -59,7 +59,8 @@ extension MakePizzaViewController: PlaygroundLiveViewMessageHandler {
                 if let message = DefaultPizzas.compare(withPizza: array) {
                     self.send(message)
                 } else {
-                    self.statusViewController.show(message: "Not in the menu, use hints")
+                    let newPizza: PlaygroundValue = PlaygroundValue.boolean(true)
+                    self.send(newPizza)
                 }
             })
         default:

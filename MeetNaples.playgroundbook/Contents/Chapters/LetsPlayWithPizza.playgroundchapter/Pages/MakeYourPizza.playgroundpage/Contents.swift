@@ -44,8 +44,12 @@ class LiveViewListener: PlaygroundRemoteLiveViewProxyDelegate {
         case let .string(pizzaName):
             page.assessmentStatus = .pass(message: "### Perfect! \nYou created a **Pizza \(pizzaName)**, now you are a **Real Neapolitan Pizzaiolo**! \n\n[**Next page**](@next)")
             break
+        case let .boolean(newPizza):
+            if newPizza {
+                page.assessmentStatus = .pass(message: "### Perfect! \nYou created your **Personal New Pizza**, nice idea! \n\n[**Next page**](@next)")
+            }
+            break
         default:
-            page.assessmentStatus = .pass(message: "### Perfect! \nYou created a **Pizza \(pizzaName)**, now you are a **Real Neapolitan Pizzaiolo**! \n\n[**Next page**](@next)")
             break
         }
     }
@@ -69,7 +73,7 @@ func createRecipe(withIngredients ingredients: [PlaygroundValue]) {
 }
 
 //#-end-hidden-code
-add(ingredient: Ingredient.Dough)
+add(ingredient: .Dough)
 //#-code-completion(everything, hide)
 //#-code-completion(identifier, show, add(ingredient:), ., Anchovies, Artichokes, ArtichokesOneQuarter, Arugula, BakedHam, Basil, Capers, Chips, Corn, Eggplants, Emmenthal, Garlic, Gorgonzola, Grana, Mozzarella, Mushrooms, MushroomsOneQuarter, OlivesBlackOneQuarter, OlivesGreen, Onion, Origan, Parmeasan, Peppers, RawHam, RawHamOneQuarter, Salame, Sauce, SourCream, Tuna, Wurstel, Zucchini)
 //#-editable-code Send the right message

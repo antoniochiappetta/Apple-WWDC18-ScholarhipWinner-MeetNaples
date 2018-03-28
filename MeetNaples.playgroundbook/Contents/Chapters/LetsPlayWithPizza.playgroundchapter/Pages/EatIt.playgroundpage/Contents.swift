@@ -35,6 +35,13 @@ class LiveViewListener: PlaygroundRemoteLiveViewProxyDelegate {
         switch value {
         case let .string(pizzaName):
             page.assessmentStatus = .pass(message: "### Perfect! \nYou enjoyed Naples and are finally ready to eat your wonderful **Pizza \(pizzaName)**! THE END")
+            break
+        case let .boolean(personalPizza):
+            if personalPizza {
+                page.assessmentStatus = .pass(message: "### Perfect! \nYou enjoyed Naples and are finally ready to eat your wonderful **Personal New Pizza**! THE END")
+            } else {
+                page.assessmentStatus = .pass(message: "### Perfect! \nYou did not create a personal pizza, but you enjoyed Naples and are finally ready to eat your wonderful.. empy pizza! THE END")
+            }
         default:
             break
         }
