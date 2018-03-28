@@ -2,8 +2,8 @@
 //  Contents.swift
 //  MeetNaples
 //
-//  Created by Antonio Chiappetta on 16/03/2017.
-//  Copyright © 2017 Antonio Chiappetta. All rights reserved.
+//  Created by Antonio Chiappetta on 28/03/2018.
+//  Copyright © 2018 Antonio Chiappetta. All rights reserved.
 //
 //#-end-hidden-code
 /*:
@@ -13,7 +13,7 @@
  - Note:
  That means that even after coming back to this page in a week you will still find it!
  
- Now look at this drawing, here's Naples with all its beautiness. You can see the famous volcano [Vesuvius](glossary://Vesuvius) together with the [Gulf of Naples](glossary://Gulf of Naples) and the rest of the city.
+ Now look at this drawing, here's Naples with all its beautiness. You can see the famous volcano [Vesuvius](glossary://Vesuvius) together with the [Gulf of Naples](glossary://Gulf) and the rest of the city.
  - - -
  When you're done with looking at the drawing, send the correct message among the ones suggested to see your pizza being put on the windowsill.
  * Callout(And then what?):
@@ -35,6 +35,13 @@ class LiveViewListener: PlaygroundRemoteLiveViewProxyDelegate {
         switch value {
         case let .string(pizzaName):
             page.assessmentStatus = .pass(message: "### Perfect! \nYou enjoyed Naples and are finally ready to eat your wonderful **Pizza \(pizzaName)**! THE END")
+            break
+        case let .boolean(personalPizza):
+            if personalPizza {
+                page.assessmentStatus = .pass(message: "### Perfect! \nYou enjoyed Naples and are finally ready to eat your wonderful **Personal New Pizza**! THE END")
+            } else {
+                page.assessmentStatus = .pass(message: "### Perfect! \nYou did not create a personal pizza, but you enjoyed Naples and are finally ready to eat your wonderful.. empy pizza! THE END")
+            }
         default:
             break
         }

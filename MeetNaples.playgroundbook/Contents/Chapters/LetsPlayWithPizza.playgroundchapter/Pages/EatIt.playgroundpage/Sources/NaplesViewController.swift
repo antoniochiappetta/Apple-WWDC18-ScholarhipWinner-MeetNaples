@@ -2,8 +2,8 @@
 //  NaplesViewController.swift
 //  MeetNaples
 //
-//  Created by Antonio Chiappetta on 16/03/2017.
-//  Copyright © 2017 Antonio Chiappetta. All rights reserved.
+//  Created by Antonio Chiappetta on 28/03/2018.
+//  Copyright © 2018 Antonio Chiappetta. All rights reserved.
 //
 
 import UIKit
@@ -144,6 +144,9 @@ extension NaplesViewController: PlaygroundLiveViewMessageHandler {
                         self.putPizzaOnTheWindowsill()
                         if let message = DefaultPizzas.compare(withPizza: array) {
                             self.send(message)
+                        } else {
+                            let personalPizza = PlaygroundValue.boolean(true)
+                            self.send(personalPizza)
                         }
                     })
                 default:
@@ -152,6 +155,8 @@ extension NaplesViewController: PlaygroundLiveViewMessageHandler {
             } else {
                 PizzaAnimationManager.createPizza(pizzaView: self.pizzaView, ingredients: [Ingredient(rawValue: "Dough")!], withCompletion: {
                     self.putPizzaOnTheWindowsill()
+                    let personalPizza = PlaygroundValue.boolean(false)
+                    self.send(personalPizza)
                 })
             }
         }

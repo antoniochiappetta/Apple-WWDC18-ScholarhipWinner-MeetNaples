@@ -1,3 +1,11 @@
+//
+//  StatusViewController.swift
+//  MeetNaples
+//
+//  Created by Antonio Chiappetta on 28/03/2018.
+//  Copyright © 2018 Antonio Chiappetta. All rights reserved.
+//
+
 import UIKit
 
 @objc(StatusViewController)

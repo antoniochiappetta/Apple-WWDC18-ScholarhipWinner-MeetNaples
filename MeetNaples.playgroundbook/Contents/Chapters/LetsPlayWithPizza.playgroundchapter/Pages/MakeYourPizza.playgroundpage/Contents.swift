@@ -2,27 +2,23 @@
 //  Contents.swift
 //  MeetNaples
 //
-//  Created by Antonio Chiappetta on 16/03/2017.
-//  Copyright © 2017 Antonio Chiappetta. All rights reserved.
+//  Created by Antonio Chiappetta on 28/03/2018.
+//  Copyright © 2018 Antonio Chiappetta. All rights reserved.
 //
 //#-end-hidden-code
 /*:
  # Time to make your pizza
  
- Last time you learnt about different kind of pizzas. Now it's to prepare one of your own!
+ Last time you learnt about different kind of pizzas. Now it's time to prepare one of your own, adding your favorite ingredients!
  
- You must be asking yourself...
- * Callout(Monologue):
- "I have such a fantasy, but don't know where to start...😣🤔"
-
- Perfect. The first ingredient to use is... a good [dough](glossary://Dough)!
+ The first one to use is... a good [dough](glossary://Dough)!
  
  ![Dough](MiniDough.png)
  
  - Example:
  This example shows how to use the `add` method with the name of an ingredient to add it on top of your pizza.\
  \
- `add(ingredient: Ingredient.Mozzarella)`
+ `add(ingredient: .Mozzarella)`
  - - -
  1. Let's start. The first ingredient is already there for you.
  2. Add as many ingredients as you want using the same mechanism.
@@ -47,6 +43,12 @@ class LiveViewListener: PlaygroundRemoteLiveViewProxyDelegate {
         switch value {
         case let .string(pizzaName):
             page.assessmentStatus = .pass(message: "### Perfect! \nYou created a **Pizza \(pizzaName)**, now you are a **Real Neapolitan Pizzaiolo**! \n\n[**Next page**](@next)")
+            break
+        case let .boolean(newPizza):
+            if newPizza {
+                page.assessmentStatus = .pass(message: "### Perfect! \nYou created your **Personal New Pizza**, nice idea! \n\n[**Next page**](@next)")
+            }
+            break
         default:
             break
         }
@@ -71,9 +73,9 @@ func createRecipe(withIngredients ingredients: [PlaygroundValue]) {
 }
 
 //#-end-hidden-code
-add(ingredient: Ingredient.Dough)
+add(ingredient: .Dough)
 //#-code-completion(everything, hide)
-//#-code-completion(identifier, show, add(ingredient:), Ingredient, (, ), ., Anchovies, Artichokes, ArtichokesOneQuarter, Arugula, BakedHam, Basil, Capers, Chips, Corn, Eggplants, Emmenthal, Garlic, Gorgonzola, Grana, Mozzarella, Mushrooms, MushroomsOneQuarter, OlivesBlackOneQuarter, OlivesGreen, Onion, Origan, Parmeasan, Peppers, RawHam, RawHamOneQuarter, Salame, Sauce, SourCream, Tuna, Wurstel, Zucchini)
+//#-code-completion(identifier, show, add(ingredient:), ., Anchovies, Artichokes, ArtichokesOneQuarter, Arugula, BakedHam, Basil, Capers, Chips, Corn, Eggplants, Emmenthal, Garlic, Gorgonzola, Grana, Mozzarella, Mushrooms, MushroomsOneQuarter, OlivesBlackOneQuarter, OlivesGreen, Onion, Origan, Parmeasan, Peppers, RawHam, RawHamOneQuarter, Salame, Sauce, SourCream, Tuna, Wurstel, Zucchini)
 //#-editable-code Send the right message
 
 //#-end-editable-code
