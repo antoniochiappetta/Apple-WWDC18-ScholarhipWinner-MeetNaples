@@ -130,6 +130,8 @@ extension PizzaMenuViewController: PlaygroundLiveViewMessageHandler {
                 }.first! as! PizzaMenuCollectionViewCell
             let pizzaName = cell.nameLabel.text!
             PizzaAnimationManager.createPizza(pizzaView: self.pizzaView, pizzaName: pizzaName, withCompletion: {
+                ingredients in
+                self.statusViewController.show(message: "+1 pizza learned")
                 UIView.animate(withDuration: 2.0, animations: {
                     self.pizzaViewToBackgroundViewHeight.constant = 0
                     self.collectionViewToBackgroundViewBottom.constant = 0
@@ -138,7 +140,14 @@ extension PizzaMenuViewController: PlaygroundLiveViewMessageHandler {
                     self.collectionView.isUserInteractionEnabled = true
                     let message: PlaygroundValue = .boolean(true)
                     self.send(message)
-                    self.statusViewController.show(message: "+1 pizza learned")
+                    var ingredientsString = ""
+                    for (index,ingredient) in ingredients.enumerated() {
+                        ingredientsString.append(ingredient)
+                        if index != ingredients.count-1 {
+                            ingredientsString.append(", ")
+                        }
+                    }
+                    self.statusViewController.show(message: ingredientsString)
                 })
             })
         }

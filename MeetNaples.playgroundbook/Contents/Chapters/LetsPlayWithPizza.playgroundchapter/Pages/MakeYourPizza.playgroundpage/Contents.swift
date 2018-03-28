@@ -75,7 +75,7 @@ func createRecipe(withIngredients ingredients: [PlaygroundValue]) {
 //#-end-hidden-code
 add(ingredient: .Dough)
 //#-code-completion(everything, hide)
-//#-code-completion(identifier, show, add(ingredient:), ., Anchovies, Artichokes, ArtichokesOneQuarter, Arugula, BakedHam, Basil, Capers, Chips, Corn, Eggplants, Emmenthal, Garlic, Gorgonzola, Grana, Mozzarella, Mushrooms, MushroomsOneQuarter, OlivesBlackOneQuarter, OlivesGreen, Onion, Origan, Parmeasan, Peppers, RawHam, RawHamOneQuarter, Salame, Sauce, SourCream, Tuna, Wurstel, Zucchini)
+//#-code-completion(identifier, show, add(ingredient:), ., Anchovies, Artichokes, Arugula, BakedHam, Basil, Capers, Chips, Corn, Eggplants, Emmenthal, Garlic, Gorgonzola, Grana, Mozzarella, Mushrooms, OlivesGreen, Onion, Origan, Parmeasan, Peppers, RawHam, Salame, Sauce, SourCream, Tuna, Wurstel, Zucchini)
 //#-editable-code Send the right message
 
 //#-end-editable-code

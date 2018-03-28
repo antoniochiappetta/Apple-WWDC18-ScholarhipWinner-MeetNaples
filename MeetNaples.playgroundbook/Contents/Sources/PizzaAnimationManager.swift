@@ -55,7 +55,7 @@ public class PizzaAnimationManager : NSObject {
         
     }
     
-    public static func createPizza(pizzaView: PizzaAnimationView, pizzaName: String, withCompletion completion: (() -> Void)?) {
+    public static func createPizza(pizzaView: PizzaAnimationView, pizzaName: String, withCompletion completion: (([String]) -> Void)?) {
         let pizzaSelector = animationForPizza(withName: pizzaName)
         if completion != nil {
             let animationInfo = AnimationInfo(pizzaView: pizzaView, completion: completion!)
@@ -74,7 +74,8 @@ public class PizzaAnimationManager : NSObject {
                 pizzaView.addMozzarellaAnimation(completion: { (completed) in
                     pizzaView.addBasilAnimation(completion: { (completed) in
                         if let completion = completion {
-                            completion()
+                            let ingredients = ["Sauce","Mozzarella","Basil"]
+                            completion(ingredients)
                         }
                     })
                 })
@@ -91,7 +92,8 @@ public class PizzaAnimationManager : NSObject {
                     pizzaView.addGarlicAnimation(completion: { (completed) in
                         pizzaView.addBasilAnimation(completion: { (completed) in
                             if let completion = completion {
-                                completion()
+                                let ingredients = ["Sauce","Origan","Garlic","Basil"]
+                                completion(ingredients)
                             }
                         })
                     })
@@ -108,7 +110,8 @@ public class PizzaAnimationManager : NSObject {
                 pizzaView.addOriganAnimation(completion: { (completed) in
                     pizzaView.addAnchoviesAnimation(completion: { (completed) in
                         if let completion = completion {
-                            completion()
+                            let ingredients = ["Sauce","Origan","Anchovies"]
+                            completion(ingredients)
                         }
                     })
                 })
@@ -125,7 +128,8 @@ public class PizzaAnimationManager : NSObject {
                     pizzaView.addAnchoviesAnimation(completion: { (completed) in
                         pizzaView.addCapersAnimation(completion: { (completed) in
                             if let completion = completion {
-                                completion()
+                                let ingredients = ["Sauce","Origan","Anchovies","Capers"]
+                                completion(ingredients)
                             }
                         })
                     })
@@ -144,7 +148,8 @@ public class PizzaAnimationManager : NSObject {
                         pizzaView.addCapersAnimation(completion: { (completed) in
                             pizzaView.addOlivesGreenAnimation(completion: { (completed) in
                                 if let completion = completion {
-                                    completion()
+                                    let ingredients = ["Sauce","Origan","Anchovies","Capers","Green Olives"]
+                                    completion(ingredients)
                                 }
                             })
                         })
@@ -162,7 +167,8 @@ public class PizzaAnimationManager : NSObject {
                 pizzaView.addMozzarellaAnimation(completion: { (completed) in
                     pizzaView.addSalameAnimation(completion: { (completed) in
                         if let completion = completion {
-                            completion()
+                            let ingredients = ["Sauce","Mozzarella","Salame"]
+                            completion(ingredients)
                         }
                     })
                 })
@@ -181,7 +187,8 @@ public class PizzaAnimationManager : NSObject {
                             pizzaView.addMushroomsOneQuarterAnimation(completion: { (completed) in
                                 pizzaView.addOlivesBlackOneQuarterAnimation(completion: { (completed) in
                                     if let completion = completion {
-                                        completion()
+                                        let ingredients = ["Sauce","Mozzarella","Baked Ham","Artichokes","Mushrooms","Black Olives"]
+                                        completion(ingredients)
                                     }
                                 })
                             })
@@ -202,7 +209,8 @@ public class PizzaAnimationManager : NSObject {
                         pizzaView.addArtichokesAnimation(completion: { (completed) in
                             pizzaView.addMushroomsAnimation(completion: { (completed) in
                                 if let completion = completion {
-                                    completion()
+                                    let ingredients = ["Sauce","Mozzarella","Baked Ham","Artichokes","Mushrooms"]
+                                    completion(ingredients)
                                 }
                             })
                         })
@@ -220,7 +228,8 @@ public class PizzaAnimationManager : NSObject {
                 pizzaView.addWurstelAnimation(completion: { (completed) in
                     pizzaView.addChipsAnimation(completion: { (completed) in
                         if let completion = completion {
-                            completion()
+                            let ingredients = ["Mozzarella","Wurstel","Chips"]
+                            completion(ingredients)
                         }
                     })
                 })
@@ -237,7 +246,8 @@ public class PizzaAnimationManager : NSObject {
                     pizzaView.addTunaAnimation(completion: { (completed) in
                         pizzaView.addOnionAnimation(completion: { (completed) in
                             if let completion = completion {
-                                completion()
+                                let ingredients = ["Sauce","Mozzarella","Tuna","Onion"]
+                                completion(ingredients)
                             }
                         })
                     })
@@ -255,7 +265,8 @@ public class PizzaAnimationManager : NSObject {
                     pizzaView.addBakedHamAnimation(completion: { (completed) in
                         pizzaView.addCornAnimation(completion: { (completed) in
                             if let completion = completion {
-                                completion()
+                                let ingredients = ["Sauce","Mozzarella","Baked Ham","Corn"]
+                                completion(ingredients)
                             }
                         })
                     })
@@ -274,7 +285,8 @@ public class PizzaAnimationManager : NSObject {
                         pizzaView.addEmmenthalAnimation(completion: { (completed) in
                             pizzaView.addParmeasanAnimation(completion: { (completed) in
                                 if let completion = completion {
-                                    completion()
+                                    let ingredients = ["Sauce","Mozzarella","Gorgonzola","Emmenthal","Parmeasan"]
+                                    completion(ingredients)
                                 }
                             })
                         })
@@ -294,7 +306,8 @@ public class PizzaAnimationManager : NSObject {
                         pizzaView.addGranaAnimation(completion: { (completed) in
                             pizzaView.addArugulaAnimation(completion: { (completed) in
                                 if let completion = completion {
-                                    completion()
+                                    let ingredients = ["Sauce","Mozzarella","Raw Ham","Grana","Arugula"]
+                                    completion(ingredients)
                                 }
                             })
                         })
@@ -314,7 +327,8 @@ public class PizzaAnimationManager : NSObject {
                         pizzaView.addZucchiniAnimation(completion: { (completed) in
                             pizzaView.addPeppersAnimation(completion: { (completed) in
                                 if let completion = completion {
-                                    completion()
+                                    let ingredients = ["Sauce","Mozzarella","Eggplants","Zucchini","Peppers"]
+                                    completion(ingredients)
                                 }
                             })
                         })
