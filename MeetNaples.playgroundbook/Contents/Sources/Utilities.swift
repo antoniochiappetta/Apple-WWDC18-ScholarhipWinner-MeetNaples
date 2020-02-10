@@ -1,9 +1,9 @@
 //
 //  Utilities.swift
-//  TestForWWDC
+//  MeetNaples
 //
-//  Created by Antonio Chiappetta on 25/03/2017.
-//  Copyright © 2017 Antonio Chiappetta. All rights reserved.
+//  Created by Antonio Chiappetta on 28/03/2018.
+//  Copyright © 2018 Antonio Chiappetta. All rights reserved.
 //
 
 import Foundation
@@ -46,7 +46,7 @@ public enum Ingredient: String {
 
 public class AnimationInfo: NSObject {
     let pizzaView: PizzaAnimationView
-    let completion: (() -> Void)?
+    let completion: (([String]) -> Void)?
     
     public init(pizzaView: PizzaAnimationView) {
         self.pizzaView = pizzaView
@@ -54,7 +54,7 @@ public class AnimationInfo: NSObject {
         super.init()
     }
     
-    public init(pizzaView: PizzaAnimationView, completion: @escaping @convention(block) () -> Void) {
+    public init(pizzaView: PizzaAnimationView, completion: @escaping @convention(block) ([String]) -> Void) {
         self.pizzaView = pizzaView
         self.completion = completion
         super.init()

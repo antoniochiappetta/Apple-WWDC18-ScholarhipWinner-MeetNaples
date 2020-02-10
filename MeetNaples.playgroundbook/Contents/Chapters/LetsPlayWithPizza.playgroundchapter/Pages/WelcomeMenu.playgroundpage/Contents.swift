@@ -2,8 +2,8 @@
 //  Contents.swift
 //  MeetNaples
 //
-//  Created by Antonio Chiappetta on 16/03/2017.
-//  Copyright © 2017 Antonio Chiappetta. All rights reserved.
+//  Created by Antonio Chiappetta on 28/03/2018.
+//  Copyright © 2018 Antonio Chiappetta. All rights reserved.
 //
 //#-end-hidden-code
 /*:
@@ -11,15 +11,12 @@
  
  Learn about this wonderful city starting from its most famous product: [pizza](glossary://Pizza).
  This book will guide you through the process of learning which ingredients are needed to make the most famous types of pizza.
- You will need to learn about at least one particular pizza to get to the next step.
  
  ![Pizza](MiniPizzaMargherita.png)
  - - -
- 1. First of all, to enable the animations on each pizza and start the counter, tap on *Run my code*.
- 2. Then turn the wheel of the [menu](glossary://Menu) to choose the pizza you want to know about.
- 2. Once chosen one, click on it to **learn** how the various [ingredient](glossary://Ingredient)s are placed on it.
- - Important:
- Pay attention to the *correct order* of the ingredients because later you will be prompted to create your own pizza based on such ingredients.
+ 1. First of all, to enable the animations on each pizza and start learning, tap on *Run my code*.
+ 2. Then turn the wheel of the menu to choose the pizza you want to know about.
+ 3. Once chosen one, click on it to **learn** which ingredients are needed to make it.
  */
 //#-code-completion(everything, hide)
 //#-hidden-code
@@ -40,21 +37,7 @@ class LiveViewListener: PlaygroundRemoteLiveViewProxyDelegate {
         switch value {
         case let .boolean(animated):
             if animated == true {
-                var numberOfPizzasAnimated = 0
-                if let currentNumber = page.keyValueStore["NumberOfPizzasAnimated"] {
-                    switch currentNumber {
-                    case let .integer(number):
-                        numberOfPizzasAnimated = number + 1
-                    default:
-                        break
-                    }
-                } else {
-                    numberOfPizzasAnimated = 1
-                }
-                page.keyValueStore["NumberOfPizzasAnimated"] = .integer(numberOfPizzasAnimated)
-                if numberOfPizzasAnimated > 0 {
-                    page.assessmentStatus = .pass(message: "### Perfect! \nYou learnt about different pizzas, go ahead and create yours! \n\n[**Next page**](@next)")
-                }
+                page.assessmentStatus = .pass(message: "### Perfect! \nYou learnt which ingredients are needed for a good pizza, go ahead and create yours! \n\n[**Next page**](@next)")
             }
         default:
             break
